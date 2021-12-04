@@ -72,7 +72,10 @@ public class Stream_02_Test {
 		 * TODO Calculer le chiffre d'affaires total de la pizzeria (somme des prix des
 		 * commandes)
 		 */
-		double result = orders.stream().map(or -> or.getPrice()).reduce((prix1, prix2) -> prix1 + prix2).get();
+		double result = orders.stream()
+							  .map(or -> or.getPrice())
+							  .reduce((prix1, prix2) -> prix1 + prix2)
+							  .get();
 		//double result = orders.stream().mapToDouble(or -> or.getPrice()).reduce((prix1, prix2) -> prix1 + prix2).getAsDouble();
 		//double result = orders.stream().mapToDouble(o -> o.getPrice()).sum();
 		
@@ -88,7 +91,9 @@ public class Stream_02_Test {
 		 * TODO Calculer le chiffre d'affaires total de la pizzeria (somme des prix des
 		 * commandes)
 		 */
-		OptionalDouble result = orders.stream().mapToDouble(or -> or.getPrice()).average();
+		OptionalDouble result = orders.stream()
+									  .mapToDouble(or -> or.getPrice())
+									  .average();
 		//OptionalDouble result = orders.stream().mapToDouble(Order::getPrice).average();
 
 		assertThat(result.isPresent(), is(true));

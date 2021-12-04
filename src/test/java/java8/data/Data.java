@@ -1,16 +1,15 @@
 package java8.data;
 
-import java8.data.domain.Customer;
-import java8.data.domain.Gender;
-import java8.data.domain.Order;
-import java8.data.domain.Pizza;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.LongStream;
+
+import java8.data.domain.Customer;
+import java8.data.domain.Gender;
+import java8.data.domain.Order;
+import java8.data.domain.Pizza;
 
 public class Data {
 
